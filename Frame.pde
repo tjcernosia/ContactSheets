@@ -1,14 +1,11 @@
 class Frame{
-  float imgWidth, imgHeight, frameWidth, frameHeight, x, y;
+  float x, y;
   PImage img; 
   
   int id;
   
   public Frame(){
-    imgWidth = 426;
-    imgHeight = 282;
-    frameHeight = 414;
-    frameWidth = imgWidth + 8;
+
   }
   
   public Frame(PImage img){
@@ -43,6 +40,8 @@ class Frame{
     //img
     img.resize((int)imgWidth, (int)imgHeight);
     pg.image(img, x+xBuffer, y+yBuffer);
+    
+    img = null;
     
     //counter
     pg.fill(0);
